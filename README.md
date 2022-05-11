@@ -4,17 +4,17 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
-## 更改默认shell
+### 更改默认shell
 chsh -s /bin/zsh
 
 # autojump插件: 目录间快速跳转
-## 安装
+### 安装
 git clone git://github.com/joelthelion/autojump.git
 
 进入目录
 
 ./install.py
-## 命令
+### 命令
 j xxx
 
 # zsh-syntax-highlighting 高亮插件
@@ -25,7 +25,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 bindkey ',' autosuggest-accept
 
-## 安装
+### 安装
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 
@@ -34,18 +34,22 @@ git add --all ===> gaa
 
 git commit -m ===> gcmsg
 
-## 查看所有git命令缩写
+### 查看所有git命令缩写
 cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 
+# history 命令查看历史输入命令的时间展示格式
+### 在~/.zshrc文件中添加
+HIST_STAMPS="yyyy-mm-dd"
 
 # 为WSL2配置代理
+### 在~/.zshrc文件中添加
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 
 alias setss='export all_proxy="socks5://${hostip}:7890";'
 
 alias unsetss='unset all_proxy'
 
-## 验证是否代理成功
+### 验证是否代理成功
 curl google.com
 
 # 参考
