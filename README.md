@@ -39,13 +39,14 @@ cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 
 
 # 为WSL2配置代理
-
-export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).****************'***)
+export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 
 alias setss='export all_proxy="socks5://${hostip}:7890";'
 
 alias unsetss='unset all_proxy'
 
+## 验证是否代理成功
+curl google.com
 
 # 参考
 https://juejin.cn/post/6844903598300610568
