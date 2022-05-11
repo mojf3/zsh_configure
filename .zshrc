@@ -143,6 +143,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+[[ -s /home/mojf/.autojump/etc/profile.d/autojump.sh ]] && source /home/mojf/.autojump/etc/profile.d/autojump.sh
 
 
 
