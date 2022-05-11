@@ -11,6 +11,8 @@ export PATH="/home/mojf/software/vim/bin:$PATH"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/anaconda3/lib
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/anaconda3/lib
 
+# history format
+HIST_STAMPS="yyyy-mm-dd"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -116,7 +118,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
-alias set_proxy='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";export all_proxy="socks5://${hostip}:7890";'
+# alias set_proxy='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";export all_proxy="socks5://${hostip}:7890";'
+alias set_proxy='export all_proxy="socks5://${hostip}:7890";'
 alias unset_proxy='unset all_proxy'
 
 
