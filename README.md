@@ -57,9 +57,9 @@ HIST_STAMPS="yyyy-mm-dd"
 ### 在~/.zshrc文件中添加
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 
-alias setss='export all_proxy="socks5://${hostip}:7890";'
+alias set_proxy='export all_proxy="socks5://${hostip}:7890";'
 
-alias unsetss='unset all_proxy'
+alias unset_proxy='unset all_proxy'
 
 ### 验证是否代理成功
 curl google.com
