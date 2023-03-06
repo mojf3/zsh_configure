@@ -1,16 +1,25 @@
 # zsh_configure
 
+## 安装
+sudo apt-get install zsh
+
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
+## or use my zsh configure
+git clone https://github.com/mojf3/zsh_configure.git
+
+cp ./zsh_configure/.zshrc ~/
+
 ### 更改默认shell
-chsh -s /bin/zsh
+chsh -s /bin/zsh OR chsh -s /usr/bin/zsh
+
+### 然后注销并重新登录
 
 # autojump插件: 目录间快速跳转
 ### 安装
-git clone git://github.com/joelthelion/autojump.git
-
+git clone https://github.com/wting/autojump.git
 进入目录
 
 ./install.py
@@ -26,10 +35,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 bindkey ',' autosuggest-accept
 
 ### 安装
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
+# git-open:在终端里打开当前项目的远程仓库地址
+### 安装
+git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
 
-# git 插件: 可以使用各种 git 命令缩写
+# git 插件(默认安装了): 可以使用各种 git 命令缩写
 git add --all ===> gaa
 
 git commit -m ===> gcmsg
@@ -51,13 +63,14 @@ alias unsetss='unset all_proxy'
 
 ### 验证是否代理成功
 curl google.com
+#### 失败会显示connection timed out
 
 # 参考
-https://juejin.cn/post/6844903598300610568
+（插件）https://juejin.cn/post/6844903598300610568
 
 https://zhuanlan.zhihu.com/p/58073103
 
-https://hufangyun.com/2017/zsh-plugin/
+（插件）https://hufangyun.com/2017/zsh-plugin/
 
-https://solidspoon.xyz/2021/02/17/%E9%85%8D%E7%BD%AEWSL2%E4%BD%BF%E7%94%A8Windows%E4%BB%A3%E7%90%86%E4%B8%8A%E7%BD%91/
+(代理相关) https://solidspoon.xyz/2021/02/17/%E9%85%8D%E7%BD%AEWSL2%E4%BD%BF%E7%94%A8Windows%E4%BB%A3%E7%90%86%E4%B8%8A%E7%BD%91/
 
