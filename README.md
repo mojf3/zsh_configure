@@ -65,6 +65,19 @@ alias unsetss='unset all_proxy'
 curl google.com
 #### 失败会显示connection timed out
 
+# 解决vim中文乱码问题
+### 打开配置文件
+vim /usr/share/vim/vimrc
+
+### 添加
+set fileencodings=utf-8,gb2312,gbk,gb18030
+
+set termencoding=utf-8
+
+set fileformats=unix
+
+set encoding=prc
+
 # 参考
 （插件）https://juejin.cn/post/6844903598300610568
 
@@ -74,3 +87,4 @@ https://zhuanlan.zhihu.com/p/58073103
 
 (代理相关) https://solidspoon.xyz/2021/02/17/%E9%85%8D%E7%BD%AEWSL2%E4%BD%BF%E7%94%A8Windows%E4%BB%A3%E7%90%86%E4%B8%8A%E7%BD%91/
 
+（中文乱码）https://blog.51cto.com/u_64214/5588894
